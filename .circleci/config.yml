@@ -12,8 +12,4 @@ jobs:
     steps:
       - checkout
       - working_directory: ~/MobileAppAutomationTest
-      - run:
-        command: |
-        adb push ~MobileAppAutomationTest/AndroidDemo/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk /data/local/tmp/com.freenow.android_demo.test
-        adb shell pm install --full -t -r "/data/local/tmp/com.freenow.android_demo.test"
-        adb shell am instrument -w -r   -e debug false -e class 'com.freenow.android_demo.activityTests.AuthenticationActivityTestEspresso' com.freenow.android_demo.test/android.support.test.runner.AndroidJUnitRunner
+      - run: ECHO "Hello"
