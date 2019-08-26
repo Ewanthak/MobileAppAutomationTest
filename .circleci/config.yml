@@ -7,7 +7,8 @@ jobs:
   build:
     executor: win/vs2019
   branches:
-    - take_home_test_ewantha
+    only:
+      - take_home_test_ewantha
     steps:
       - checkout
       - working_directory: ~/MobileAppAutomationTest
